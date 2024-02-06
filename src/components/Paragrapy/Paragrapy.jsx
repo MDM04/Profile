@@ -1,9 +1,9 @@
 import styles from "./paragrapy.module.css"
 
-const Paragrapy =({dados})=>{
+const Paragrapy =({children})=>{
     return(
        <div>
-         <p className={styles.p}>{dados}</p>
+         <p className={styles.p}>{children}</p>
        </div>
     )
 }
