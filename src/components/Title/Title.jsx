@@ -10,12 +10,13 @@ poderiamos utlizar o style da div para aplicar em cada item dentro como no caso 
 
 */
 
-const Title=(props)=>{           // utilizando as props childrem
-   return(
-    <h1
-    {...props}
-     className={`${styles.title}`}
-     >{props.children}</h1>
+const Title = ({ children, name }) => {           // utilizando as props childrem
+   return (
+      <h1
+         className={`${styles.title}`}
+      >
+        {name}{children}
+      </h1>
    )
 }
 

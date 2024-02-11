@@ -1,9 +1,12 @@
 import styles from "./button.module.css"
 
-const Button = ({ urlName, children }) => {
+const Button = ({urlName, name,  ...rest}) => {
   return (
-    <div className={styles.button}>
-      <a href={urlName} target="_blank">{children}</a>
+    <div
+     className={`${styles.button}`}
+     {...rest}
+    >
+      <a href={urlName} target="_blank">{name}</a>
     </div>
   )
 }

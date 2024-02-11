@@ -13,9 +13,21 @@
 .button {
     margin-top: 5rem;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
+}
+
+.buttons2{
+    margin-left: 1rem;
+    padding: .500rem 2rem;
+    background-color: yellow;
+    color: rgb(212, 244, 248);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px 5px rgba(247, 252, 253, 0.747);
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: underline;
 }
 
 .proButton{
