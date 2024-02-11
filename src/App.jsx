@@ -4,12 +4,10 @@ import Poster from "./assets/avatar.jpg"
 import Paragrapy from "./components/Paragrapy/Paragrapy"
 import app from "./app.module.css"
 import Button from "./components/Button/Button"
+import { useState } from "react"
 // observe abaixo o texto como ficou com  o children e no metodo normal
 
-function hanleClick(ev) { // desse modo colocamos o evento de click no buton 
-  console.log(ev)
-  alert("Parabens voce adicionou seu primerio evento")
-}
+
 /*
 si caso  a function criada nao depender de nada criado dentro do componente abaixo ela
 nao necessariamente precisa estar dentro do componente abaixo ela pode 
@@ -20,6 +18,12 @@ como por exemplo acontece no button eu utilizei uma propriedade do app.button pa
 dar gap entre os buttons que estao no perfil principal 
 */
 const App = () => {
+  //function modificadora
+const [folowText, setFollowText] = useState("Follow") /// retorna uma function que muda esse valors
+function hanleClick(ev) { // desse modo colocamos o evento de click no buton 
+  setFollowText("Following")
+}
+
   return (
     <div className="app">
       <div className={app.container}>
@@ -28,7 +32,7 @@ const App = () => {
           <button
             className={app.proButton}
             onClick={hanleClick}>
-            Projetos
+           {folowText}
           </button>
         </Title>
         <Paragrapy name="Full stack, JavaScript, Developer" /> {/* pode ser uma boa pratica usar assim*/}
